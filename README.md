@@ -104,7 +104,7 @@ uvicorn main:app --reload
   ```bash
   curl http://localhost:8000/users
   ```
--Criar um novo usuário:
+- Criar um novo usuário:
   
   ```bash
   curl -X POST http://localhost:8000/users -H "Content-Type: application/json" -d '{"username": "novousuario"}'
