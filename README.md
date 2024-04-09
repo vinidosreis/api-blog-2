@@ -38,5 +38,7 @@ Esta é uma API simples para um blog, onde você pode criar, ler e apagar posts,
 ## Windows
   ```bash
   python3 -m venv venv
-## Ativando
+```
+  ```bash
   venv\Scripts\activate
+```
