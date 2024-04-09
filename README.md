@@ -23,6 +23,7 @@ Esta é uma API simples para um blog, onde você pode criar, ler e apagar posts,
 - Python 3.x
 - FastAPI
 - SQLAlchemy
+- PyMysql
 - Banco de dados (por exemplo, SQLite, PostgreSQL, etc.)
 
 ## Instalação
@@ -57,6 +58,7 @@ pip install -r requirements.txt
 
 # Configuração do Banco de Dados:
 - Edite o arquivo database.py para configurar o URL do seu banco de dados.
+- Para criar a conexão com seu banco de dados será necessário colocar o URL do seu banco de dados dentro das apas. Exemplo: mysql+pymysql://<usuario>:<senha>@<host>/<nome_do_banco_de_dados>
 - Modifique o arquivo models.py conforme necessário para definir as tabelas do banco de dados.
 
 # Execute o aplicativo:
@@ -123,5 +125,4 @@ uvicorn main:app --reload
 # Observações
 - Certifique-se de fornecer os dados corretos no corpo das solicitações POST para criar novos posts e usuários.
 - Este é um exemplo simples de uso e não inclui autenticação ou validação de entrada. Certifique-se de implementar esses recursos para sua própria aplicação.
-- Para mais detalhes sobre como usar a API, consulte a documentação interativa em http://localhost:8000/docs
-
+- Essa API será atualizada em breve. 
