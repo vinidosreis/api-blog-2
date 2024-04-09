@@ -58,7 +58,7 @@ pip install -r requirements.txt
 
 # Configuração do Banco de Dados:
 - Edite o arquivo database.py para configurar o URL do seu banco de dados.
-- Para criar a conexão com seu banco de dados será necessário colocar o URL do seu banco de dados dentro das apas. Exemplo: mysql+pymysql://<usuario>:<senha>@<host>/<nome_do_banco_de_dados>
+- Para criar a conexão com seu banco de dados será necessário colocar o URL do seu banco de dados dentro das apas. Exemplo: mysql+pymysql://seu_usuario:sua_senha@localhost/nome_do_banco_de_dados
 - Modifique o arquivo models.py conforme necessário para definir as tabelas do banco de dados.
 
 # Execute o aplicativo:
