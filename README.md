@@ -99,27 +99,27 @@ uvicorn main:app --reload
 - Apagar um post por ID:
 
   ```bash
-  curl -X DELETE http://localhost:8000/posts/1
+  -X DELETE http://localhost:8000/posts/1
   ```
 - Obter todos os usuários:
 
   ```bash
-  curl http://localhost:8000/users
+  http://localhost:8000/users
   ```
 - Criar um novo usuário:
   
   ```bash
-  curl -X POST http://localhost:8000/users -H "Content-Type: application/json" -d '{"username": "novousuario"}'
+  -X POST http://localhost:8000/users -H "Content-Type: application/json" -d '{"username": "novousuario"}'
   ```
 - Obter um usuário por ID:
 
   ```bash
-  curl http://localhost:8000/users/1
+  http://localhost:8000/users/1
   ```
 - Apagar um usuário por ID:
 
   ```bash
-  curl -X DELETE http://localhost:8000/users/1
+  -X DELETE http://localhost:8000/users/1
   ```
 
 # Observações
