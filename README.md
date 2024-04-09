@@ -31,29 +31,29 @@ Esta é uma API simples para um blog, onde você pode criar, ler e apagar posts,
 
    ```bash
    git clone https://github.com/charlesbrito/API_BLOG.git
+Crie e ative um ambiente virtual (opcional, mas recomendado):
 
-## Crie e ative um ambiente virtual (opcional, mas recomendado):
-
-
-```bash 
-python3 -m venv venv```
-
+bash
+Copy code
+python3 -m venv venv
 source venv/bin/activate
+Instale as dependências:
 
-## Instale as dependências:
-
-  
+bash
+Copy code
 pip install -r requirements.txt
+Configuração do Banco de Dados
 
-## Configuração do Banco de Dados
 Edite o arquivo database.py no diretório ./app para configurar o URL do seu banco de dados.
 Modifique o arquivo models.py no diretório ./app conforme necessário para definir as tabelas do banco de dados.
+Execute o aplicativo:
 
-## Execute o aplicativo:
- 
+bash
+Copy code
 uvicorn main:app --reload
+O aplicativo estará em execução em http://localhost:8000.
 
-## Uso
+Uso
 Para obter todos os posts, faça uma solicitação GET para http://localhost:8000/posts.
 
 Para criar um novo post, faça uma solicitação POST para http://localhost:8000/posts com os dados do post no corpo da solicitação.
@@ -69,10 +69,3 @@ Para criar um novo usuário, faça uma solicitação POST para http://localhost:
 Para obter um usuário específico por ID, faça uma solicitação GET para http://localhost:8000/users/{user_id}.
 
 Para apagar um usuário por ID, faça uma solicitação DELETE para http://localhost:8000/users/{user_id}
-
-
-
-
-
-
-
