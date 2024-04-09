@@ -35,7 +35,7 @@ Esta é uma API simples para um blog, onde você pode criar, ler e apagar posts,
 ## Crie e ative um ambiente virtual (opcional, mas recomendado):
 
 
-python3 -m venv venv
+```python3 -m venv venv```
 
 source venv/bin/activate
 
