@@ -33,12 +33,14 @@ Esta é uma API simples para um blog, onde você pode criar, ler e apagar posts,
    git clone https://github.com/charlesbrito/API_BLOG.git
 
 ## Crie e ative um ambiente virtual (opcional, mas recomendado):
+
 ```bash
 python3 -m venv venv
 ```bash
 source venv/bin/activate
 
 ## Instale as dependências:
+
 ```bash
 pip install -r requirements.txt
 
