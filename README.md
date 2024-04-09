@@ -35,8 +35,8 @@ Esta é uma API simples para um blog, onde você pode criar, ler e apagar posts,
 
 # Crie e ative um ambiente virtual (opcional, mas recomendado):
 
-## Criando e ativando ambiente virtual no Windows
+## Windows
   ```bash
   python3 -m venv venv
-  ```bash
+## Ativando
   venv\Scripts\activate
