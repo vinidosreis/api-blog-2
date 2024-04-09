@@ -34,14 +34,14 @@ Esta é uma API simples para um blog, onde você pode criar, ler e apagar posts,
 
 ## Crie e ative um ambiente virtual (opcional, mas recomendado):
 
-  ```bash
+
 python3 -m venv venv
-  ```bash
+
 source venv/bin/activate
 
 ## Instale as dependências:
 
-  ```bash
+  
 pip install -r requirements.txt
 
 ## Configuração do Banco de Dados
@@ -49,7 +49,7 @@ Edite o arquivo database.py no diretório ./app para configurar o URL do seu ban
 Modifique o arquivo models.py no diretório ./app conforme necessário para definir as tabelas do banco de dados.
 
 ## Execute o aplicativo:
-  ```bash
+ 
 uvicorn main:app --reload
 
 ## Uso
