@@ -20,7 +20,7 @@ Esta é uma API simples para um blog, onde você pode criar, ler e apagar posts,
 
 ## Requisitos
 
-- Python 3.x
+- Python 3.6+
 - FastAPI
 - SQLAlchemy
 - PyMysql
