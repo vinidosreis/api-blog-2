@@ -24,7 +24,7 @@ Esta é uma API simples para um blog, onde você pode criar, ler e apagar posts,
 - FastAPI
 - SQLAlchemy
 - PyMysql
-- Banco de dados (por exemplo, SQLite, PostgreSQL, etc.)
+- MySQL
 
 ## Instalação
 
