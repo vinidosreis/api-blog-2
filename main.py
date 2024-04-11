@@ -31,23 +31,30 @@ def get_db():
 db_dependency = Annotated[Session, Depends(get_db)]
 
 # Endpoint para criar post
-@app.post("/posts/", status_code=status.HTTP_201_CREATED)
+@app.post("/posts/", tags = ["post"], status_code=status.HTTP_201_CREATED)
 async def create_post(post: PostBase, db:db_dependency):
     db_post = models.Post(**post.dict())
     db.add(db_post)
     db.commit()
 
 
-# Endpoint para ler post
-@app.get("/posts/{post_id}", status_code=status.HTTP_200_OK)
+# Endpoint para ler post por ID
+@app.get("/posts/{post_id}", tags = ["post"], status_code=status.HTTP_200_OK)
 async def read_post(post_id: int, db:db_dependency):
     post = db.query(models.Post).filter(models.Post.id == post_id).first()
     if post is None:
         raise HTTPException(status_code=404, detail='Post não encontrado')
     return post
 
+# Endpoit para listar todos os posts
+@app.get("/posts/", tags = ["post"], status_code=status.HTTP_200_OK)
+async def read_all_posts(db: db_dependency):
+    post = db.query(models.Post).all()
+    return post
+
+
 # Endpoit para deletar post
-@app.delete("/posts/{post_id}", status_code=status.HTTP_200_OK)
+@app.delete("/posts/{post_id}", tags = ["post"], status_code=status.HTTP_200_OK)
 async def delete_post(post_id:int, db:db_dependency):
     db_post = db.query(models.Post).filter(models.Post.id == post_id).first()
     if db_post is None:
@@ -56,22 +63,29 @@ async def delete_post(post_id:int, db:db_dependency):
     db.commit()
 
 # Endpoit para criar usuário
-@app.post("/users/", status_code=status.HTTP_201_CREATED)
+@app.post("/users/", tags = ["user"], status_code=status.HTTP_201_CREATED)
 async def create_user(user: UserBase, db: db_dependency):
     db_user = models.User(**user.dict())
     db.add(db_user)
     db.commit()
 
-# Endpoint para ler usuário
-@app.get("/users/{user_id}", status_code=status.HTTP_200_OK)
+# Endpoint para ler usuário por id 
+@app.get("/users/{user_id}", tags = ["user"], status_code=status.HTTP_200_OK)
 async def read_user(user_id: int, db:db_dependency):
     user = db.query(models.User).filter(models.User.id == user_id).first()
     if user is None:
         raise HTTPException(status_code=404, detail='Usuário não encontrado')
     return user
 
-# Endpoit para deletar usuário
-@app.delete("/users/{user_id}", status_code=status.HTTP_200_OK)
+# Endpoint para ler todos os usuários
+@app.get("/users/", tags = ["user"], status_code=status.HTTP_200_OK)
+async def read_all_users(db:db_dependency):
+    user = db.query(models.User).all()
+    return user
+
+
+# Endpoit para deletar usuário por id 
+@app.delete("/users/{user_id}", tags = ["user"], status_code=status.HTTP_200_OK)
 async def delete_user(user_id: int, db:db_dependency):
     db_user = db.query(models.User).filter(models.User.id == user_id).first()
     if db_user is None:
